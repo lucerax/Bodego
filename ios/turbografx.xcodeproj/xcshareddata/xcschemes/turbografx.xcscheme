@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "bodego_mobile.app"
-               BlueprintName = "bodego_mobile"
-               ReferencedContainer = "container:bodego_mobile.xcodeproj">
+               BuildableName = "turbografx.app"
+               BlueprintName = "turbografx"
+               ReferencedContainer = "container:turbografx.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "bodego_mobileTests.xctest"
-               BlueprintName = "bodego_mobileTests"
-               ReferencedContainer = "container:bodego_mobile.xcodeproj">
+               BuildableName = "turbografxTests.xctest"
+               BlueprintName = "turbografxTests"
+               ReferencedContainer = "container:turbografx.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "bodego_mobile.app"
-            BlueprintName = "bodego_mobile"
-            ReferencedContainer = "container:bodego_mobile.xcodeproj">
+            BuildableName = "turbografx.app"
+            BlueprintName = "turbografx"
+            ReferencedContainer = "container:turbografx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "bodego_mobile.app"
-            BlueprintName = "bodego_mobile"
-            ReferencedContainer = "container:bodego_mobile.xcodeproj">
+            BuildableName = "turbografx.app"
+            BlueprintName = "turbografx"
+            ReferencedContainer = "container:turbografx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

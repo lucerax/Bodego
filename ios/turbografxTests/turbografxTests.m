@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface bodego_mobileTests : XCTestCase
+@interface turbografxTests : XCTestCase
 
 @end
 
-@implementation bodego_mobileTests
+@implementation turbografxTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

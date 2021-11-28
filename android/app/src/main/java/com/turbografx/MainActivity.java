@@ -1,4 +1,4 @@
-package com.bodego_mobile;
+package com.turbografx;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "bodego_mobile";
+    return "turbografx";
   }
 }
