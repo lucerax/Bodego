@@ -5,7 +5,7 @@
    * @format
    * @flow strict-local
    */
-  import React from 'react';
+  import React, {Component} from 'react';
   import LoginScreen from "react-native-login-screen";
   import {
     SafeAreaView,
@@ -13,112 +13,119 @@
     StatusBar,
     StyleSheet,
     Text,
+    Alert,
+    TouchableOpacity,
+    Image,
     useColorScheme,
     View,
     Button
   } from 'react-native';
   import { NavigationContainer } from '@react-navigation/native';
   import {createNativeStackNavigator} from '@react-navigation/native-stack';
-  import {
-    Colors,
-    DebugInstructions,
-    Header,
-    LearnMoreLinks,
-    ReloadInstructions,
-  } from 'react-native/Libraries/NewAppScreen';
-  
+  import {RNCamera} from 'react-native-camera';
   import colors from './assets/colors/colors';
-
+  import {
+    HomeScreen
+  } from './screens'
   const Stack = createNativeStackNavigator();
 
-  const Section = ({children, title}) => {
-    const isDarkMode = useColorScheme() === 'dark';
-    return (
-      <View style={styles.sectionContainer}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            {
-              color: isDarkMode ? Colors.white : Colors.black,
-            },
-          ]}>
-          {title}
-        </Text>
-        <Text
-          style={[
-            styles.sectionDescription,
-            {
-              color: isDarkMode ? Colors.light : Colors.dark,
-            },
-          ]}>
-          {children}
-        </Text>
-      </View>
-      // <LoginScreen />
-    );
-  };
+  const onBarCodeRead = (e) => {
+    Alert.alert("Barcode values is" + e.data, "Barcode type is" + e.type);
+  }
 
-  const Auth = () => {
+  // export default class barcodeScanner extends Component {
+  //   constructor(props) {
+  //     super(props);
+  //     this.handleTourch = this.handleTourch.bind(this);
+  //     this.state = {
+  //       torchOn: false
+  //     }
+  //   }
+  // }
+
+  function Auth({navigation}) {
     return (
       <LoginScreen
-          labelTextStyle={{
-            color: "#adadad",
-            fontFamily: "Now-Bold",
-          }}
-          logoTextStyle={{
-            fontSize: 27,
-            color: "#fdfdfd",
-            fontFamily: "Now-Black",
-          }}
-          loginButtonTextStyle={{
-            color: "#fdfdfd",
-            // color: "#adadad",
-            fontFamily: "Now-Bold",
-          }}
-          textStyle={{
-            color: "#757575",
-            // color: "fdfdfdfd",
-            fontFamily: "Now-Regular",
-          }}
-          signupStyle={{
-            color: "#fdfdfd",
-            fontFamily: "Now-Bold",
-          }}
-          usernameOnChangeText={(username) => console.log("Username: ", username)}
-          onPressSettings={() => alert("Settings Button is pressed")}
-          passwordOnChangeText={(password) => console.log("Password: ", password)}
-          onPressLogin={() => {
-            console.log("onPressLogin is pressed");
-          }}
-          onPressSignup={() => {
-            console.log("onPressSignUp is pressed");
+        labelTextStyle={{
+          color: "#adadad",
+          fontFamily: "Now-Bold",
+        }}
+        logoTextStyle={{
+          fontSize: 27,
+          color: "#fdfdfd",
+          fontFamily: "Now-Black",
+        }}
+        loginButtonTextStyle={{
+          color: "#fdfdfd",
+          fontFamily: "Now-Bold",
+        }}
+        textStyle={{
+          color: "#757575",
+          fontFamily: "Now-Regular",
+        }}
+        signupStyle={{
+          color: "#fdfdfd",
+          fontFamily: "Now-Bold",
+        }}
+        usernameOnChangeText={(username) => console.log("Username: ", username)}
+        onPressSettings={() => alert("Settings Button is pressed")}
+        passwordOnChangeText={(password) => console.log("Password: ", password)}
+        onPressLogin={() => {
+          navigation.navigate('HomeScreen')
+        }}
+        onPressSignup={() => {
+          console.log("onPressSignUp is pressed");
+        }}
+      >
+        <View
+          style={{
+            position: "relative",
+            alignSelf: "center",
+            marginTop: 64,
           }}
         >
-          <View
-            style={{
-              position: "relative",
-              alignSelf: "center",
-              marginTop: 64,
-            }}
-          >
-            <Text style={{ color: "white", fontSize: 30 }}>
-              Inside Login Screen Component
-            </Text>
-          </View>
+          <Text style={{ color: "white", fontSize: 30 }}>
+            Inside Login Screen Component
+          </Text>
+        </View>
         </LoginScreen>
     );
   }
 
-  function Temp({navigation}) {
+  // function HomeScreen({navigation}) {
+  //   return (
+  //     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+  //       <Text>Details Screen</Text>
+  //       <Button
+  //         title="Go to Details... again"
+  //         onPress={() => navigation.push('Temp')}
+  //       />
+  //       <Button title="Go to Auth" onPress={() => navigation.navigate('Auth')} />
+  //       <Button title="Go back" onPress={() => navigation.goBack()} />
+  //     </View>
+  //   );
+  // }
+
+  function Scan({naviagation}) {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Details Screen</Text>
-        <Button
-          title="Go to Details... again"
-          onPress={() => navigation.navigate('Temp')}
-        />
-        <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-        <Button title="Go back" onPress={() => navigation.goBack()} />
+      <View style={styles.container}>
+        <RNCamera
+          style={styles.preview}
+          torchMode={this.state.torchOn ? RNCamera.constants.TorchMode.on : RNCamera.constants.TorchMode.off}
+          onBarCodeRead={this.onBarCodeRead}
+          ref={cam => this.camera = cam}
+          aspect={RNCamera.constants.Aspect.fill}
+          >
+          <Text style={{
+          backgroundColor: 'white'
+          }}>BARCODE SCANNER</Text>
+        </RNCamera>
+        <View style={styles.bottomOverlay}>
+          <TouchableOpacity onPress={() => this.handleTourch(this.state.torchOn)}>
+            <Image style={styles.cameraIcon}
+            source={this.state.torchOn === true ? require('./assets/aboutreact.png') : require('./assets/favicon.png')} />
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }
@@ -129,7 +136,8 @@
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Temp" screenOptions={{headerShown: false}}>
           <Stack.Screen name="Auth" component={Auth} />
-          {/* <Stack.Screen name = "Temp" component={Temp} /> */}
+          <Stack.Screen name = "HomeScreen" component={HomeScreen} />
+          <Stack.Screen name = "Scan" component={Scan} />
         </Stack.Navigator>
       </NavigationContainer>
     );
@@ -137,6 +145,27 @@
   };
   
   const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      flexDirection: 'row',
+    },
+    preview: {
+      flex: 1,
+      justifyContent: 'flex-end',
+      alignItems: 'center',
+    },
+    cameraIcon: {
+      margin: this,
+      height: 40,
+      width: 40,
+    },
+    bottomOverlay: {
+      position: "absolute",
+      width: "100%",
+      flex: 20,
+      flexDirection: "row",
+      justifyContent: "space-between",
+    },
     sectionContainer: {
       marginTop: 32,
       paddingHorizontal: 24,
