@@ -5,7 +5,7 @@
    * @format
    * @flow strict-local
    */
-  import React, {Component} from 'react';
+  import React from 'react';
   import LoginScreen from "react-native-login-screen";
   import {
     SafeAreaView,
@@ -21,11 +21,15 @@
     Button
   } from 'react-native';
   import { NavigationContainer } from '@react-navigation/native';
+  import { navigationRef } from './RootNavigation';
   import {createNativeStackNavigator} from '@react-navigation/native-stack';
   import {RNCamera} from 'react-native-camera';
   import colors from './assets/colors/colors';
+
   import {
-    HomeScreen
+    DateScan,
+    HomeScreen,
+    ScanWrapper
   } from './screens'
   const Stack = createNativeStackNavigator();
 
@@ -33,15 +37,6 @@
     Alert.alert("Barcode values is" + e.data, "Barcode type is" + e.type);
   }
 
-  // export default class barcodeScanner extends Component {
-  //   constructor(props) {
-  //     super(props);
-  //     this.handleTourch = this.handleTourch.bind(this);
-  //     this.state = {
-  //       torchOn: false
-  //     }
-  //   }
-  // }
 
   function Auth({navigation}) {
     return (
@@ -120,11 +115,12 @@
   const App = ()  => {
   
     return (
-      <NavigationContainer>
+      <NavigationContainer ref = {navigationRef}>
         <Stack.Navigator initialRouteName="Temp" screenOptions={{headerShown: false}}>
           <Stack.Screen name="Auth" component={Auth} />
           <Stack.Screen name = "HomeScreen" component={HomeScreen} />
-          <Stack.Screen name = "Scan" component={Scan} />
+          <Stack.Screen name = "ScanWrapper" component={ScanWrapper} />
+          <Stack.Screen name = "DateScan" component={DateScan} />
         </Stack.Navigator>
       </NavigationContainer>
     );
