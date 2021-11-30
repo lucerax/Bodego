@@ -29,7 +29,8 @@
   import {
     DateScan,
     HomeScreen,
-    ScanWrapper
+    ScanWrapper,
+    TempScan
   } from './screens'
   const Stack = createNativeStackNavigator();
 
@@ -116,11 +117,12 @@
   
     return (
       <NavigationContainer ref = {navigationRef}>
-        <Stack.Navigator initialRouteName="Temp" screenOptions={{headerShown: false}}>
+        <Stack.Navigator initialRouteName="Auth" screenOptions={{headerShown: false}}>
           <Stack.Screen name="Auth" component={Auth} />
           <Stack.Screen name = "HomeScreen" component={HomeScreen} />
           <Stack.Screen name = "ScanWrapper" component={ScanWrapper} />
           <Stack.Screen name = "DateScan" component={DateScan} />
+          <Stack.Screen name = "TempScan" component={TempScan} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -12,6 +12,8 @@ target 'turbografx' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-tesseract-ocr', :path => '../node_modules/react-native-tesseract-ocr'
+
   target 'turbografxTests' do
     inherit! :complete
     # Pods for testing

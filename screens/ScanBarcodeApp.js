@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import BarcodeScanner from 'react-native-scan-barcode';
 import * as RootNavigation from '../RootNavigation';
+
 export default class ScanBarcodeApp extends React.Component {
   constructor(props) {
     super(props);
@@ -50,7 +51,7 @@ export default class ScanBarcodeApp extends React.Component {
           <Text>Details Screen</Text>
           <Button
             title="Go to Scan"
-            onPress={() => RootNavigation.navigate('DateScan', {itemId: this.state.scanVal})}
+            onPress={() => RootNavigation.navigate('TempScan', {itemId: this.state.scanVal})}
           />
           </View>
       )
