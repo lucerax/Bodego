@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {
     Text,
     View, SafeAreaView, ScrollView, Dimensions,
-    Button, StyleSheet, Image, NativeModules, ActivityIndicator
+    Button, StyleSheet, Image, NativeModules, ActivityIndicator, Alert
 } from 'react-native';
 
 import ImagePicker from 'react-native-image-crop-picker';
@@ -23,7 +23,7 @@ const defaultPickerOptions = {
 };
 
 export default function DateScan({route, navigation}) {
-    const {itemId} = route.params;
+    // const {itemId} = route.params;
     const [isLoading, setIsLoading] = useState(false);
     const [progress, setProgress] = useState(0);
     const [imgSrc, setImgSrc] = useState(null);
@@ -48,7 +48,29 @@ export default function DateScan({route, navigation}) {
                 LANG_ENGLISH, 
                 tesseractOptions
             );
+            
             setText(recognizedText);
+            Alert.alert(
+                //title
+                'Discounted Price',
+                //body
+                '$4.50',
+                [
+                  {
+                    text: 'Add to cart',
+                    onPress: () => {
+                        console.log('Yes Pressed');
+                        navigation.navigate("CartScreen");
+                    }
+                  },
+                  {
+                    text: 'Cancel',
+                    onPress: () => console.log('No Pressed'), style: 'cancel'
+                  },
+                ],
+                {cancelable: false},
+                //clicking out side of alert will not cancel
+              );
         } catch (err) {
             console.error(err);
             setText('');
@@ -94,7 +116,8 @@ export default function DateScan({route, navigation}) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Tesseract OCR example</Text>
+            <Image source={require('./logo.png')}></Image>
+            <Text style={styles.title}>Scan expiry date</Text>
             <Text style={styles.instructions}>Select an image source:</Text>
             <View style={styles.options}>
                 <View style={styles.button}>
@@ -176,6 +199,7 @@ function fitWidth(value, imageWidth) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
+      flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: '#F5FCFF',
@@ -201,6 +225,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       textAlign: 'center',
       margin: 10,
+      fontFamily: "Inter-Bold",
     },
     instructions: {
       textAlign: 'center',

@@ -14,6 +14,8 @@ target 'turbografx' do
 
   pod 'react-native-tesseract-ocr', :path => '../node_modules/react-native-tesseract-ocr'
 
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'turbografxTests' do
     inherit! :complete
     # Pods for testing

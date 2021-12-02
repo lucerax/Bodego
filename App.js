@@ -26,22 +26,70 @@
   import {RNCamera} from 'react-native-camera';
   import colors from './assets/colors/colors';
 
+  import logo from './screens/logo.png';
+
   import {
     DateScan,
     HomeScreen,
     ScanWrapper,
-    TempScan
+    TempScan,
+    OnBoardScreen,
+    CartScreen
   } from './screens'
+
+  import BottomTabNavigator from './components/BottomTabNavigator';
+
   const Stack = createNativeStackNavigator();
 
   const onBarCodeRead = (e) => {
     Alert.alert("Barcode values is" + e.data, "Barcode type is" + e.type);
   }
 
+  const renderLogo = () => (
+    <View
+      style={{
+        bottom: 50,
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <View style={{marginTop:100}}>
+        <Image
+          resizeMode="contain"
+          source={require("./screens/logo.png")}
+          style={{ height: 150, width: 150 }}
+        />
+      </View>
+      
+      <View style={{marginTop:50}}>
+        <Text
+          style={{
+            bottom: 32,
+            color: "#fdfdfd",
+            fontFamily: "Inter-Black",
+            fontSize: 50,
+            shadowRadius: 3,
+            shadowOpacity: 0.7,
+            shadowColor: "#757575",
+            shadowOffset: {
+              width: 0,
+              height: 3,
+            },
+          }}
+        >
+          Bodego
+        </Text>
+      </View>
+    </View>
+  );
+
 
   function Auth({navigation}) {
     return (
+      <SafeAreaView style={{backgroundColor: '#FFF'}}>
       <LoginScreen
+        source={require('./assets/empty_bg.png')}
+        logoComponent={renderLogo()}
         labelTextStyle={{
           color: "#adadad",
           fontFamily: "Now-Bold",
@@ -73,6 +121,9 @@
           console.log("onPressSignUp is pressed");
         }}
       >
+        
+        </LoginScreen>
+
         <View
           style={{
             position: "relative",
@@ -80,11 +131,12 @@
             marginTop: 64,
           }}
         >
-          <Text style={{ color: "white", fontSize: 30 }}>
+          <Text>Bodego</Text>
+          <Text style={{flex:1, color: "white", fontSize: 30 }}>
             Inside Login Screen Component
           </Text>
         </View>
-        </LoginScreen>
+        </SafeAreaView>
     );
   }
 
@@ -117,13 +169,17 @@
   
     return (
       <NavigationContainer ref = {navigationRef}>
-        <Stack.Navigator initialRouteName="Auth" screenOptions={{headerShown: false}}>
+        <Stack.Navigator initialRouteName="OnBoard" screenOptions={{headerShown: false}}>
+          <Stack.Screen name="OnBoard" component={OnBoardScreen} />
           <Stack.Screen name="Auth" component={Auth} />
           <Stack.Screen name = "HomeScreen" component={HomeScreen} />
+          <Stack.Screen name = "CartScreen" component={CartScreen} />
           <Stack.Screen name = "ScanWrapper" component={ScanWrapper} />
           <Stack.Screen name = "DateScan" component={DateScan} />
           <Stack.Screen name = "TempScan" component={TempScan} />
+          <Stack.Screen name="Navigator" component={BottomTabNavigator} />
         </Stack.Navigator>
+
       </NavigationContainer>
     );
       
