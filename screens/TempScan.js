@@ -99,6 +99,27 @@ export default function DateScan({route, navigation}) {
             setWidth(image.width);
             setImgSrc({uri: image.path});
             setResult(await MlkitOcr.detectFromUri(image.path));
+            Alert.alert(
+                //title
+                'Expiry 12/02/21',
+                //body
+                '$2.50',
+                [
+                  {
+                    text: 'Add to cart',
+                    onPress: () => {
+                        console.log('Yes Pressed');
+                        navigation.navigate("CartScreen");
+                    }
+                  },
+                  {
+                    text: 'Cancel',
+                    onPress: () => console.log('No Pressed'), style: 'cancel'
+                  },
+                ],
+                {cancelable: false},
+                //clicking out side of alert will not cancel
+              );
         } catch (err) {
             if (err.message !== 'User cancelled image selection') {
                 console.error(err);
@@ -116,28 +137,21 @@ export default function DateScan({route, navigation}) {
 
     return (
         <View style={styles.container}>
-            <Image source={require('./logo.png')}></Image>
-            <Text style={styles.title}>Scan expiry date</Text>
-            <Text style={styles.instructions}>Select an image source:</Text>
+            <Image style={{height:'30%', width: '50%'}} source={require('../assets/product_images/lavash.png')}></Image>
+            <Text style={styles.title}>Atoria's Traditional Lavash </Text>
+            <Text style={{fontFamily:'Inter-SemiBold', color:'#000', fontSize:20}}>$4.99</Text>
+            <Text style={{fontFamily:'Inter', color:'#000'}}>Now scan the expiry date</Text>
             <View style={styles.options}>
                 <View style={styles.button}>
                     <Button
                         disabled={isLoading}
-                        title="Cam"
+                        title="Scan"
                         onPress={() => {
                         recognizeFromCamera();
                         }}
                     />  
                 </View>
-                <View style={styles.button}>
-                    <Button
-                        disabled={isLoading}
-                        title="Picker"
-                        onPress={() => {
-                        recognizeFromPicker();
-                        }}
-                    />
-                </View>
+                
             </View>
             {imgSrc && (
                 <View style={styles.imageContainer}>
@@ -146,7 +160,7 @@ export default function DateScan({route, navigation}) {
                     <ProgressCircle showsText radius={50} percent={progress} />
                 ) : (
                     <SafeAreaView style={styles.container}>
-                        {!!result?.length && (
+                        {/* {!!result?.length && (
                             <ScrollView
                                 contentContainerStyle={{
                                     alignItems: 'stretch',
@@ -165,9 +179,9 @@ export default function DateScan({route, navigation}) {
                                                 backgroundColor: '#ccccccaf',
                                                 position: 'absolute',
                                                 top: fitHeight(line.bounding.top, imgHeight ?? 0),
-                                                height: fitHeight(line.bounding.height, imgHeight ?? 0),
-                                                left: fitWidth(line.bounding.left, imgWidth ?? 0),
-                                                width: fitWidth(line.bounding.width, imgWidth ?? 0),
+                                                // height: fitHeight(line.bounding.height, imgHeight ?? 0),
+                                                left: fitWidth(0, imgWidth ?? 0),
+                                                // width: fitWidth(line.bounding.width, imgWidth ?? 0),
                                             }}
                                             >
                                             <Text style={{ fontSize: 10 }}>{line.text}</Text>
@@ -176,7 +190,7 @@ export default function DateScan({route, navigation}) {
                                     });
                                 })}
                             </ScrollView>
-                        )}
+                        )} */}
                     </SafeAreaView>
                 )}
                 </View>
@@ -226,6 +240,8 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       margin: 10,
       fontFamily: "Inter-Bold",
+      color: '#000',
+      paddingHorizontal: 20,
     },
     instructions: {
       textAlign: 'center',

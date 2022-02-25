@@ -5,5 +5,5 @@ import ScanBarcodeApp from './ScanBarcodeApp';
 export default function ScanWrapper({navigation}) {
     return (
         <ScanBarcodeApp/>
-    );
+            );
 }

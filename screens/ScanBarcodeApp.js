@@ -36,7 +36,9 @@ export default class ScanBarcodeApp extends React.Component {
 
   render() {
     console.log(this.state.haveScanned);
-    if (this.state.haveScanned == false) {
+    if (this.state.haveScanned == true) {
+      RootNavigation.navigate("TempScan");
+    } 
       return (
             <BarcodeScanner
               onBarCodeRead={this.barcodeReceived}
@@ -45,17 +47,19 @@ export default class ScanBarcodeApp extends React.Component {
               cameraType={this.state.cameraType}
             /> 
       );
-    } else {
-      return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>Details Screen</Text>
-          <Button
-            title="Go to Scan"
-            onPress={() => RootNavigation.navigate('TempScan', {itemId: this.state.scanVal})}
-          />
-          </View>
-      )
-    }
+    
+    // } else {
+    //   return (
+    //     // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    //     //   <Text> Details Screen </Text>
+    //     //   <Button
+    //     //     title="Go to Scan"
+    //     //     onPress={() => RootNavigation.navigate('TempScan', {itemId: this.state.scanVal})}
+    //     //   />
+    //     //   </View>
+        
+    //   )
+    // }
     
   }
 

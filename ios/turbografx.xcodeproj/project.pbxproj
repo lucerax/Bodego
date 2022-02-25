@@ -11,14 +11,16 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		7DA5B1D95EBA4F2C91DB43BC /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B89EFB4A61148CA988CD48B /* Inter-Black.ttf */; };
-		9C5F29C99ADA47C7B2D41A2B /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FA755838A5D48DB98D4DC3F /* Inter-Bold.ttf */; };
-		9826C33CC6BE4428937ACB8A /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 308239B7056A4C0EB55DDEE7 /* Inter-ExtraBold.ttf */; };
-		ABA6B2151E384496A0EE96D0 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4555C60B1544E829A05DA17 /* Inter-ExtraLight.ttf */; };
-		E4C753C310EE490AA4EFB549 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A84A0422E25648DCB201B69F /* Inter-Light.ttf */; };
-		BBDF86653CA84008BDD002F4 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE21EB98DFC642EBA937BF5C /* Inter-Medium.ttf */; };
+		2C43C8B7AD4EDFD936A094B7 /* libPods-turbografx-turbografxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8753918DFC755E2DE0041BAD /* libPods-turbografx-turbografxTests.a */; };
 		70A579154D824F33BD393A3E /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F10357EC3D4C43CE92A1AB3F /* Inter-Regular.ttf */; };
+		7DA5B1D95EBA4F2C91DB43BC /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B89EFB4A61148CA988CD48B /* Inter-Black.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9826C33CC6BE4428937ACB8A /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 308239B7056A4C0EB55DDEE7 /* Inter-ExtraBold.ttf */; };
+		988EA5744A793AA2A0BC5D28 /* libPods-turbografx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C28C2BF9B8100EAB7C473A1 /* libPods-turbografx.a */; };
+		9C5F29C99ADA47C7B2D41A2B /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FA755838A5D48DB98D4DC3F /* Inter-Bold.ttf */; };
+		ABA6B2151E384496A0EE96D0 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4555C60B1544E829A05DA17 /* Inter-ExtraLight.ttf */; };
+		BBDF86653CA84008BDD002F4 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE21EB98DFC642EBA937BF5C /* Inter-Medium.ttf */; };
+		E4C753C310EE490AA4EFB549 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A84A0422E25648DCB201B69F /* Inter-Light.ttf */; };
 		F8F0DFAA506E4E4698FAA9FB /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B834A35B6674471E99EAC557 /* Inter-SemiBold.ttf */; };
 		FA90145C13BE42A4BA598016 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6CFE73B901A402A88E0401D /* Inter-Thin.ttf */; };
 /* End PBXBuildFile section */
@@ -43,17 +45,23 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = turbografx/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = turbografx/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = turbografx/main.m; sourceTree = "<group>"; };
+		1AD9F37C1394962476EC9BCF /* Pods-turbografx-turbografxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-turbografx-turbografxTests.release.xcconfig"; path = "Target Support Files/Pods-turbografx-turbografxTests/Pods-turbografx-turbografxTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C28C2BF9B8100EAB7C473A1 /* libPods-turbografx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-turbografx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		308239B7056A4C0EB55DDEE7 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraBold.ttf"; path = "../assets/fonts/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5970A5217F4DF2A304524AA6 /* Pods-turbografx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-turbografx.debug.xcconfig"; path = "Target Support Files/Pods-turbografx/Pods-turbografx.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = turbografx/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8560B014D56D06AD82A989A7 /* Pods-turbografx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-turbografx.release.xcconfig"; path = "Target Support Files/Pods-turbografx/Pods-turbografx.release.xcconfig"; sourceTree = "<group>"; };
+		8753918DFC755E2DE0041BAD /* libPods-turbografx-turbografxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-turbografx-turbografxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B89EFB4A61148CA988CD48B /* Inter-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Black.ttf"; path = "../assets/fonts/Inter-Black.ttf"; sourceTree = "<group>"; };
+		9FA755838A5D48DB98D4DC3F /* Inter-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.ttf"; path = "../assets/fonts/Inter-Bold.ttf"; sourceTree = "<group>"; };
+		A84A0422E25648DCB201B69F /* Inter-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Light.ttf"; path = "../assets/fonts/Inter-Light.ttf"; sourceTree = "<group>"; };
+		B834A35B6674471E99EAC557 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.ttf"; path = "../assets/fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		CA5580BA3FEA453B8D0851DD /* Pods-turbografx-turbografxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-turbografx-turbografxTests.debug.xcconfig"; path = "Target Support Files/Pods-turbografx-turbografxTests/Pods-turbografx-turbografxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D6CFE73B901A402A88E0401D /* Inter-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Thin.ttf"; path = "../assets/fonts/Inter-Thin.ttf"; sourceTree = "<group>"; };
+		DE21EB98DFC642EBA937BF5C /* Inter-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.ttf"; path = "../assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		8B89EFB4A61148CA988CD48B /* Inter-Black.ttf */ = {isa = PBXFileReference; name = "Inter-Black.ttf"; path = "../assets/fonts/Inter-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9FA755838A5D48DB98D4DC3F /* Inter-Bold.ttf */ = {isa = PBXFileReference; name = "Inter-Bold.ttf"; path = "../assets/fonts/Inter-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		308239B7056A4C0EB55DDEE7 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Inter-ExtraBold.ttf"; path = "../assets/fonts/Inter-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F4555C60B1544E829A05DA17 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Inter-ExtraLight.ttf"; path = "../assets/fonts/Inter-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A84A0422E25648DCB201B69F /* Inter-Light.ttf */ = {isa = PBXFileReference; name = "Inter-Light.ttf"; path = "../assets/fonts/Inter-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DE21EB98DFC642EBA937BF5C /* Inter-Medium.ttf */ = {isa = PBXFileReference; name = "Inter-Medium.ttf"; path = "../assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F10357EC3D4C43CE92A1AB3F /* Inter-Regular.ttf */ = {isa = PBXFileReference; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B834A35B6674471E99EAC557 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; name = "Inter-SemiBold.ttf"; path = "../assets/fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D6CFE73B901A402A88E0401D /* Inter-Thin.ttf */ = {isa = PBXFileReference; name = "Inter-Thin.ttf"; path = "../assets/fonts/Inter-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F10357EC3D4C43CE92A1AB3F /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
+		F4555C60B1544E829A05DA17 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraLight.ttf"; path = "../assets/fonts/Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C43C8B7AD4EDFD936A094B7 /* libPods-turbografx-turbografxTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				988EA5744A793AA2A0BC5D28 /* libPods-turbografx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +114,43 @@
 			name = turbografx;
 			sourceTree = "<group>";
 		};
+		26044ED34C5843BE8D5FF99B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B89EFB4A61148CA988CD48B /* Inter-Black.ttf */,
+				9FA755838A5D48DB98D4DC3F /* Inter-Bold.ttf */,
+				308239B7056A4C0EB55DDEE7 /* Inter-ExtraBold.ttf */,
+				F4555C60B1544E829A05DA17 /* Inter-ExtraLight.ttf */,
+				A84A0422E25648DCB201B69F /* Inter-Light.ttf */,
+				DE21EB98DFC642EBA937BF5C /* Inter-Medium.ttf */,
+				F10357EC3D4C43CE92A1AB3F /* Inter-Regular.ttf */,
+				B834A35B6674471E99EAC557 /* Inter-SemiBold.ttf */,
+				D6CFE73B901A402A88E0401D /* Inter-Thin.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				2C28C2BF9B8100EAB7C473A1 /* libPods-turbografx.a */,
+				8753918DFC755E2DE0041BAD /* libPods-turbografx-turbografxTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		535A0888FA3790E66390E9F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5970A5217F4DF2A304524AA6 /* Pods-turbografx.debug.xcconfig */,
+				8560B014D56D06AD82A989A7 /* Pods-turbografx.release.xcconfig */,
+				CA5580BA3FEA453B8D0851DD /* Pods-turbografx-turbografxTests.debug.xcconfig */,
+				1AD9F37C1394962476EC9BCF /* Pods-turbografx-turbografxTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -128,6 +169,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				26044ED34C5843BE8D5FF99B /* Resources */,
+				535A0888FA3790E66390E9F0 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -143,23 +185,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		26044ED34C5843BE8D5FF99B /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				8B89EFB4A61148CA988CD48B /* Inter-Black.ttf */,
-				9FA755838A5D48DB98D4DC3F /* Inter-Bold.ttf */,
-				308239B7056A4C0EB55DDEE7 /* Inter-ExtraBold.ttf */,
-				F4555C60B1544E829A05DA17 /* Inter-ExtraLight.ttf */,
-				A84A0422E25648DCB201B69F /* Inter-Light.ttf */,
-				DE21EB98DFC642EBA937BF5C /* Inter-Medium.ttf */,
-				F10357EC3D4C43CE92A1AB3F /* Inter-Regular.ttf */,
-				B834A35B6674471E99EAC557 /* Inter-SemiBold.ttf */,
-				D6CFE73B901A402A88E0401D /* Inter-Thin.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "turbografxTests" */;
 			buildPhases = (
+				BBEE2DE5B237834DBD6BA5E4 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				FBC2FF54620A5DA5E44E123E /* [CP] Embed Pods Frameworks */,
+				60E2D749A8B01BD551E942EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,11 +213,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "turbografx" */;
 			buildPhases = (
+				126878A106441168D774E8FE /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				AE10A86B7B5ACAF0CA244F56 /* [CP] Embed Pods Frameworks */,
+				19F790A34F188A365E337531 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +310,118 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
+		126878A106441168D774E8FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-turbografx-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19F790A34F188A365E337531 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-turbografx/Pods-turbografx-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-turbografx/Pods-turbografx-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-turbografx/Pods-turbografx-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60E2D749A8B01BD551E942EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-turbografx-turbografxTests/Pods-turbografx-turbografxTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-turbografx-turbografxTests/Pods-turbografx-turbografxTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-turbografx-turbografxTests/Pods-turbografx-turbografxTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE10A86B7B5ACAF0CA244F56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-turbografx/Pods-turbografx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-turbografx/Pods-turbografx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-turbografx/Pods-turbografx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBEE2DE5B237834DBD6BA5E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-turbografx-turbografxTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC2FF54620A5DA5E44E123E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-turbografx-turbografxTests/Pods-turbografx-turbografxTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-turbografx-turbografxTests/Pods-turbografx-turbografxTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-turbografx-turbografxTests/Pods-turbografx-turbografxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,6 +474,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5580BA3FEA453B8D0851DD /* Pods-turbografx-turbografxTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -357,6 +501,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AD9F37C1394962476EC9BCF /* Pods-turbografx-turbografxTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -380,6 +525,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5970A5217F4DF2A304524AA6 /* Pods-turbografx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -405,6 +551,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8560B014D56D06AD82A989A7 /* Pods-turbografx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -459,6 +606,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -524,6 +672,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

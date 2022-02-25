@@ -9,16 +9,9 @@ import BottomTabNavigator from '../components/BottomTabNavigator';
 
 
 const foods = [
+    
     {
-      id: '1',
-      name: "Atoria's Lavash",
-      ingredients: 'Bread',
-      old_price: '8.30',
-      new_price: '7.50',
-      image: require('../assets/product_images/lavash.png'),
-    },
-    {
-      id: '2',
+      id: 1,
       name: 'Nature Own Brioche',
       ingredients: 'Bread',
       old_price: '7.10',
@@ -26,12 +19,20 @@ const foods = [
       image: require('../assets/product_images/brioche.jpg'),
     },
     {
-        id:3,
+        id:2,
         name: 'Nature Own Brioche',
         ingredients: 'Bread',
         old_price: '7.10',
         new_price: '6.30',
         image: require('../assets/product_images/brioche.jpg'),
+        },
+    {
+        id: 3,
+        name: "Atoria's Traditional Lavash",
+        ingredients: 'Bread',
+        old_price: '4.99',
+        new_price: '2.50',
+        image: require('../assets/product_images/lavash.png'),
         },
   ];
   
@@ -40,7 +41,7 @@ const CartScreen = ({navigation}) => {
   const CartCard = ({item}) => {
     return (
       <View style={style.cartCard}>
-        <Image source={item.image} style={{height: 80, width: 80}} />
+        <Image source={item.image} style={{height: 80, width: 50}} />
         <View
           style={{
             height: 100,
@@ -48,26 +49,29 @@ const CartScreen = ({navigation}) => {
             paddingVertical: 20,
             flex: 1,
           }}>
-          <Text style={{fontFamily:'Inter-SemiBold', fontSize: 15}}>{item.name}</Text>
+          <Text style={{fontFamily:'Inter-SemiBold', fontSize: 15, color:'#333333', marginTop:-10}}>{item.name}</Text>
           {/* <Text style={{fontSize: 13, color: '#0'}}>
             {item.ingredients}
           </Text> */}
 
 
-            <Text style= {{fontFamily: 'Inter-Light'}}>
+            <Text style= {{fontFamily: 'Inter-Light', color: '#333333'}}>
                 Before: 
-                <Text style={{fontSize: 14 , fontFamily: 'Inter-Bold', textDecorationLine: 'line-through', textDecorationStyle: 'solid', marginLeft:30}}>
+                <Text style={{fontSize: 14 , fontFamily: 'Inter-Bold', textDecorationLine: 'line-through', textDecorationStyle: 'solid', marginLeft:30, color:'#333333'}}>
                     ${item.old_price}
                 </Text>
               </Text>
             
 
-          <Text style={{fontSize: 14, fontFamily: 'Inter-Bold'}}>
-              <Text style= {{fontFamily: 'Inter-Light', marginLeft: 20}}>
+          <View style={{alignContent:'center'}}>
+          <Text style={{fontSize: 14, fontFamily: 'Inter-Bold', color:'#333333'}}>
+              <Text style= {{fontFamily: 'Inter-Light', color:'#333333'}}>
               New: 
               </Text>
-              ${item.new_price}
+              <Text style={{marginLeft:20}}>
+                  ${item.new_price} </Text>
             </Text>
+        </View>
 
 
         </View>
@@ -82,7 +86,7 @@ const CartScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{backgroundColor: "#", flex: 1}}>
       <View style={style.header}>
-        <FontAwesomeIcon icon={faArrowLeft} size={28} color='#000' onPress={navigation.goBack} />
+        <FontAwesomeIcon icon={faArrowLeft} size={28} color='#000' onPress={() => navigation.navigate("HomeScreen")} />
         <View style={{alignContent:'center', paddingHorizontal:120}}>
             <Text style={{fontSize: 30, fontFamily: 'Inter-Black', alignContent:'center', color:'#000'}}>Cart</Text>
         </View>
@@ -101,10 +105,10 @@ const CartScreen = ({navigation}) => {
                 justifyContent: 'space-between',
                 marginVertical: 15,
               }}>
-              <Text style={{fontSize: 17, fontFamily:'Inter-Black', marginLeft: 10}}>
+              <Text style={{fontSize: 17, fontFamily:'Inter-Black', marginLeft: 10, color:'#333333'}}>
                 Total Cost
               </Text>
-              <Text style={{fontSize: 20, fontWeight: 'Inter-Bold', marginRight: 20}}>$19.70</Text>
+              <Text style={{fontSize: 20, fontWeight: 'Inter-Bold', marginRight: 20, color:'#333333'}}>$14.70</Text>
             </View>
             <View style={{marginHorizontal: 30, marginTop: 10}}>
               <SecondaryButton title="Generate verification code" />

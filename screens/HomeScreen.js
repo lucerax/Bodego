@@ -38,18 +38,24 @@ import {
 import { PrimaryButton, SecondaryButton } from '../components/Button';
 
 
-const offers = [
+var offers = [
   {
     id: '1',
     name: "Crafts and Grapes",
-    text: "Get up to 15% off milk and eggs in the next 6 hours at Crafts and Grapes Markets, Berkeley",
+    text: "Get up to 15% off milk and eggs today at Crafts and Grapes Markets, Berkeley",
     image: require('./offer.png')
   },
   {
     id: '2',
     name: "Kathmandu",
-    text: "Get up to 15% off milk and eggs in the next 6 hours at Kathmandu Markets, Berkeley",
-    image: require('./offer.png')
+    text: "Get up to 20% off cheese today at Kathmandu Market, Berkeley",
+    image: require('./mtn.png')
+  },
+  {
+    id: '3',
+    name: "Shattuck Market",
+    text: "Buy more than 3 products with Bodego for 20 reward points!",
+    image: require('./flats.png')
   },
 ];
 
@@ -91,12 +97,12 @@ const Card = ({item, navigation}) => {
 
 
         <View style={{marginHorizontal: 20, marginTop:20, alignItems:'center'}}>
-          <Text style={{fontSize: 18, fontWeight: 'bold'}}>{item.name}</Text>
+          <Text style={{fontSize: 18, fontFamily: 'Inter-SemiBold', color:'#333333'}}>{item.name}</Text>
         </View>
 
 
         <View style={{marginHorizontal: 15, marginVertical:10}}>
-          <Text>{item.text} </Text>
+          <Text style={{ fontFamily:'Inter', color:'#333333'}}>{item.text} </Text>
         </View>
 
 
@@ -124,35 +130,35 @@ const Card = ({item, navigation}) => {
 
 
 
-
+var newData = offers;
 export default function HomeScreen({navigation}) {
   const [search, setSearch] = useState('');
   const [filteredDataSource, setFilteredDataSource] = useState([]);
   const [masterDataSource, setMasterDataSource] = useState([]);
-  
+
     useEffect(() => {
-      setFilteredDataSource(offers);
+      setFilteredDataSource(newData);
       setMasterDataSource(offers);
-    }
-       );
+    });
   const searchFilterFunction = (text) => {
   // Check if searched text is not blank
-  if (text) {
+  if (true) {
     // Inserted text is not blank
     // Filter the masterDataSource
     // Update FilteredDataSource
-    const newData = masterDataSource.filter(
+    newData = masterDataSource.filter(
       function (item) {
-        const itemData = item.title
-          ? item.title.toUpperCase()
+        const itemData = item.name
+          ? item.name.toUpperCase()
           : ''.toUpperCase();
         const textData = text.toUpperCase();
         const k = itemData.indexOf(textData) > -1;
-        console.log(textData);
-        // console.log(item.title);
         return itemData.indexOf(textData) > -1;
+
     });
+    console.log("new data ", newData);
     setFilteredDataSource(newData);
+    console.log("FIL: ", filteredDataSource);
     setSearch(text);
   } else {
     // Inserted text is blank
@@ -171,7 +177,7 @@ return (
           <Text style={{fontFamily: 'Inter-Bold', fontSize: 40, marginLeft: 10, color: '#000'}}>Oski</Text>
           <Image
           source={require('./oski_pf.jpg')}
-          style={{height: 50, width: 50, borderRadius: 30, marginLeft:50, marginTop:5}}
+          style={{height: 50, width: 50, borderRadius: 30, marginLeft:80, marginTop:5}}
         />
         </View>
 
@@ -194,7 +200,7 @@ return (
               onChangeText={(text) => {
                 searchFilterFunction(text);
                 setFilteredDataSource(['']);
-                console.log(JSON.stringify(filteredDataSource));
+                //console.log(JSON.stringify(filteredDataSource));
               }}
               value={search}
             />

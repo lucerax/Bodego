@@ -3,7 +3,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faHome, faSearch, faInbox, faUser, faPlus } from '@fortawesome/free-solid-svg-icons';
 
-import { Tab, Button, Title, Add } from './BottomTabStyles';
+import { Tab, TabButton, Title, Add } from './BottomTabStyles';
 
 export default function BottomTabNavigator({ navigation, background, colorTitle, colorIcon }) {
     return (
